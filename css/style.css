@@ -1,0 +1,199 @@
+:root {
+    --background: #2f3841;
+    --textlight: #2ae2ef;
+    --borderColor: #e0eae4;
+    --color: #73aaf3;
+    --secondColor: rgb(245, 245, 51);
+  }
+
+html {
+    font-size: 0.7em;
+  }
+  
+  body {
+    font-family:  Helvetica,Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--borderColor);
+    background-color: var(--background);
+  }
+
+  ::selection {
+    background-color: var(--textlight);
+    color: var(--background);
+  }
+
+  h1,
+  h2
+   {
+    margin-bottom: 0.6rem;
+    color: var(--color);
+    font-weight: bold;
+    line-height: 1.1;
+  }
+  
+  h1 {
+
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3.2rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  
+  header .title {
+    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+  }
+  
+  .main {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+
+  #cardGrid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+/*  
+  #cardGrid {
+    display: grid;
+    position: relative;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    grid-template-rows: 300px 500px;
+    grid-template-columns: 50% 50% 50%; v
+    grid-template-areas:
+    "flexboxRow flexboxColumn cssGridLayout"
+    "linearGradients boxTrasitonGlow OverlayCardWithTitle"
+    ;
+}
+
+#flexboxRow{
+  grid-area: flexboxRow;
+}
+
+#flexboxColumn{
+  grid-area: flexboxColumn;
+}
+
+#cssGridLayout{
+  grid-area: cssGridLayout;
+}
+
+#linearGradients{
+  grid-area: linearGradients;
+}
+
+#boxTrasitonGlow{
+  grid-area: boxTrasitonGlow;
+}
+
+#OverlayCardWithTitle{
+  grid-area: OverlayCardWithTitle;
+} */
+
+  .mainCard{
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 200px;
+  }
+  
+  .cardArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: var(--color);
+    border: 2px dotted var(--borderColor);
+    transition: all 0.4s ease-in;
+  }
+  
+  .cardArea .heading {
+    position: relative;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--background);
+    color: var(--color);
+    text-align: center;
+    border: 2px dashed var(--borderColor);
+    border-radius: 8px;
+    transition: all 0.4s ease-in;
+  }
+
+  .cardArea:hover {
+    box-shadow: inset 0px 0px 10px var(--color), 0 0 20px var(--color);
+    border: 2px dashed var(--textlight);
+    transition: 500ms;
+  }
+
+  .cardArea:hover .heading {
+    box-shadow: inset 0px 0px 10px var(--color), 0 0 20px var(--color);
+    border: 2px dotted var(--textlight);
+    transition: 500ms;
+  }
+
+  .cardArea pre {
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--secondColor);
+    border-radius: 8px;
+    background-image: linear-gradient(
+      rgba(162, 84, 235, 0.3) 0%,
+      rgba(116, 161, 245, 0.6) 100%
+    );
+    white-space: pre-wrap;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardArea .codeView {
+    flex-grow: 1;
+  }
+  
+  .cardArea pre:active {
+    user-select: all;
+  }
+  
+  @media screen and (min-width: 768px) {
+  
+    .mainCard {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .mainCard:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .mainCard {
+      flex: 0 0 32%;
+      max-width: 32%;
+    }
+  }
+  
